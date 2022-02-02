@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site</title>
+
+	<style>
+		
+		:root{
+	--yellow:#edea34;
+  --black: #272727;
+}
+body {
+  font-size: 15px;
+  background-color:black;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+/* .wrapper */
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.top {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero hero cta1"
+    "hero hero cta2"
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white url(../site/2.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.hero > * {
+  background: var(--yellow);
+  padding: 5px;
+}
+
+.cta {
+  background: var(--yellow);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cta p {
+  margin: 0;
+}
+
+.cta1 {
+  grid-area: cta1;
+}
+
+.cta2 {
+  grid-area: cta2;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+/* Navigation */
+
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu a {
+  background: var(--yellow);
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+
+/* Features! */
+
+.features {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature {
+  background: white;
+  padding: 10px;
+  border: 1px solid white;
+  text-align: center;
+  box-shadow: 0 0 4px  rgba(0,0,0,0.1);
+}
+
+.feature .icon {
+  font-size: 50px;
+}
+.feature p {
+  color: rgba(0,0,0,0.5);
+}
+
+
+
+	</style>
+</head>
+<body>
+
+ <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+      </button>
+      <ul id="menu-list">
+        <li>
+          <a href="">Tacos</a>
+        </li>
+        <li>
+          <a href="">Cookies</a>
+        </li>
+        <li>
+          <a href="">Cakes</a>
+        </li>
+        <li>
+          <a href="">Desserts</a>
+        </li>
+        <li>
+          <a href="">Reservations</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="wrapper">
+    <div class="top">
+      <header class="hero">
+        <h1>Devi's Taco Joint</h1>
+        <p>Pretty Good Tacos!</p>
+      </header>
+      <div class="cta cta1">
+        <p class="price">$2.99</p>
+        <p>Tacos</p>
+      </div>
+      <div class="cta cta2">
+        <p class="price">$4.99</p>
+        <p>Cakes</p>
+      </div>
+
+    </div>
+   
+
+    <section class="features">
+      <div class="feature">
+        <span class="icon">🌮</span>
+        <h3>Tacos</h3>
+        <p>“A balanced diet is a taco in each hand.”</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍪</span>
+        <h3>Cookies</h3>
+        <p>“If you can’t change the world with chocolate chip cookies, how can you change the world?”</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍰</span>
+        <h3>Cakes</h3>
+        <p>Don’t wait until it’s too late. Eat that slice of cake!</p>
+      </div>
+
+      <div class="feature">
+        <span class="icon">🍵</span>
+        <h3>Tea</h3>
+        <p>Have a cup of positivi-tea!</p>
+      </div>
+
+      <div class="feature">
+        <span class="icon">🎵</span>
+        <h3>Music</h3>
+        <p>One good thing about music, when it hits you, you feel no pain.</p>
+      </div>
+    </section>
+</body>
+</html>
